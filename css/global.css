@@ -1,0 +1,67 @@
+/* Estilos globais */
+body {
+  /* Define as fontes padrão */
+  font-family: "Fira Sans", Arial, Helvetica, sans-serif;
+  /* Remove as margens padrão */
+  margin: 0px;
+  /* Define a cor padrão do texto */
+  color: #141414;
+}
+
+/* Estilos para títulos e parágrafos */
+h1,
+h2,
+h3,
+p {
+  /* Remove as margens padrão */
+  margin: 0px;
+}
+
+/* Estilos para listas */
+ul {
+  /* Remove as margens e o padding padrão */
+  margin: 0px;
+  padding: 0px;
+  /* Remove os marcadores de lista */
+  list-style: none;
+}
+
+/* Estilos para links */
+a {
+  /* Remove o sublinhado padrão dos links */
+  text-decoration: none;
+}
+
+/* Estilos para imagens */
+img {
+  /* Define a largura máxima da imagem */
+  max-width: 100%;
+  height: auto;
+  /* Define o display da imagem como bloco */
+  display: block;
+}
+
+/* Estilos para o subtítulo */
+.subtitulo {
+  /* Define o tamanho da fonte e a altura da linha do subtítulo */
+  font-size: 8rem;
+  line-height: 1;
+  /* Define o texto em maiúsculas */
+  text-transform: uppercase;
+  /* Quebra palavras longas */
+  word-break: break-all;
+  /* Define a largura máxima do subtítulo */
+  max-width: 4ch;
+}
+
+/* Media query para telas menores que 800px */
+@media (max-width: 800px) {
+  /* Reduz o tamanho da fonte do subtítulo */
+  .subtitulo {
+    font-size: 3rem;
+    /* Define o texto com a primeira letra maiúscula */
+    text-transform: capitalize;
+    /* Remove a largura máxima do subtítulo */
+    max-width: initial !important;
+  }
+}

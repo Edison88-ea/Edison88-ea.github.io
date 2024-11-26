@@ -1,0 +1,95 @@
+/* Estilos da seção de introdução */
+.introducao {
+  /* Define a largura máxima da seção */
+  max-width: 1200px;
+  /* Adiciona espaço interno à seção */
+  padding: 40px 20px;
+  /* Centraliza a seção horizontalmente */
+  margin: 0 auto;
+  /* Define o layout da seção como grid */
+  display: grid;
+  /* Define o layout das colunas da grid */
+  grid-template-columns: 1fr 2fr;
+  /* Adiciona espaço entre os elementos da grid */
+  gap: 100px;
+  /* Alinha os itens verticalmente ao centro */
+  align-items: center;
+}
+
+/* Estilos do título da introdução */
+.introducao h1 {
+  /* Define o tamanho da fonte e a altura da linha do título */
+  font-size: 4.5rem;
+  line-height: 1.125;
+  /* Adiciona espaço abaixo do título */
+  margin-bottom: 30px;
+  /* Define o posicionamento absoluto para o elemento ::before */
+  position: relative;
+}
+
+/* Estilos do elemento ::before do título da introdução */
+.introducao h1::before {
+  /* Define o conteúdo do elemento ::before */
+  content: "";
+  /* Define o display do elemento ::before */
+  display: block;
+  /* Define a largura e altura do elemento ::before */
+  width: 130px;
+  height: 100px;
+  /* Define a imagem de fundo do elemento ::before */
+  background: url("../img/detalhe.svg") no-repeat center;
+  /* Define o posicionamento absoluto do elemento ::before */
+  position: absolute;
+  /* Define a posição vertical e horizontal do elemento ::before */
+  top: -15px;
+  left: -40px;
+  /* Define o nível de z-index do elemento ::before */
+  z-index: -1;
+}
+
+/* Estilos do parágrafo da introdução */
+.introducao p {
+  /* Define o tamanho da fonte e a cor do parágrafo */
+  font-size: 1.5rem;
+  color: #525252;
+}
+
+/* Media query para telas menores que 1000px */
+@media (max-width: 1000px) {
+  /* Reduz o tamanho da fonte do título da introdução */
+  .introducao h1 {
+    font-size: 3rem;
+  }
+}
+
+/* Media query para telas menores que 800px */
+@media (max-width: 800px) {
+  /* Altera o layout da introdução para duas colunas */
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+    /* Adiciona espaço entre os elementos da introdução */
+    gap: 40px;
+  }
+  /* Reduz o tamanho da fonte do título da introdução */
+  .introducao h1 {
+    font-size: 2rem;
+  }
+  /* Altera o tamanho e posição do elemento ::before do título da introdução */
+  .introducao h1::before {
+    width: 30px;
+    height: 10px;
+    left: 0px;
+  }
+}
+
+/* Media query para telas menores que 400px */
+@media (max-width: 400px) {
+  /* Altera o layout da introdução para uma única coluna */
+  .introducao {
+    grid-template-columns: 1fr;
+  }
+  /* Esconde a imagem da introdução */
+  .introducao img {
+    display: none;
+  }
+}

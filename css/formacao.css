@@ -1,0 +1,150 @@
+.formacao {
+  background: #141414;
+  color: #fff;
+}
+.formacao-container {
+  /* Define a largura máxima da seção */
+  max-width: 1200px;
+  /* Adiciona espaço interno à seção */
+  padding: 120px 20px;
+  /* Centraliza a seção horizontalmente */
+  margin: 0 auto;
+  /* Define o layout da seção como grid */
+  display: grid;
+  /* Define o layout das colunas da grid */
+  grid-template-columns: 1fr 2fr;
+  /* Adiciona espaço entre os elementos da grid */
+  gap: 100px;
+  position: relative;
+}
+.formacao-container::after {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url("../img/detalhe.svg") no-repeat center;
+  position: absolute;
+  bottom: -50px;
+  left: 20px;
+}
+.formacao .subtitulo {
+  color: #000;
+  max-width: 5ch;
+}
+.formacao-texto {
+  /* Define o tamanho da fonte e a altura da linha do texto */
+  font-size: 1.5rem;
+  line-height: 1.33rem;
+  /* Define a largura máxima do texto */
+  max-width: 40ch;
+  /* Adiciona espaço abaixo do texto */
+  margin-bottom: 60px;
+  /* Define a cor do texto */
+  color: #a3a3a3;
+}
+.formacao strong {
+  color: #fff;
+}
+.faculdade-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+.faculdade {
+  flex: 1;
+  background: #000;
+  padding: 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+.faculdade-tipo {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #a3a3a3;
+  margin-bottom: 10px;
+}
+.faculdade-curso {
+  flex: 1;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  margin-bottom: 40px;
+  position: relative;
+}
+.faculdade-curso::before {
+  /* Define o conteúdo do elemento ::before */
+  content: "";
+  /* Define o display do elemento ::before */
+  display: block;
+  /* Define a largura e altura do elemento ::before */
+  width: 4px;
+  height: 20px;
+  /* Define o gradiente de cores do elemento ::before */
+  background: linear-gradient(#b6f829, #67dd0a);
+  /* Define o posicionamento absoluto do elemento ::before */
+  position: absolute;
+  /* Define a posição vertical e horizontal do elemento ::before */
+  left: -24px;
+}
+.faculdade-instituicao {
+  font-size: 1.125rem;
+  color: #a3a3a3;
+}
+.cursos {
+  margin-bottom: 60px;
+}
+.formacao-extra h3 {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #8f8f8f;
+  text-transform: uppercase;
+  margin: 30px;
+  position: relative;
+}
+
+.formacao-extra h3::before {
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -36px;
+  top: -4px;
+}
+.cursos h3::before {
+  background: url("../img/cursos.svg") no-repeat center;
+}
+.idiomas h3::before {
+  background: url("../img/idiomas.svg") no-repeat center;
+}
+.formacao-extra li {
+  font-size: 1.125rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.formacao span {
+  color: #8f8f8f;
+}
+.cursos li {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  .formacao-container {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+  .formacao .subtitulo {
+    color: #ffffff;
+  }
+  .formacao-texto {
+    font-size: 1.25rem;
+  }
+  .formacao-extra h3::before {
+    position: initial;
+    margin-bottom: 10px;
+  }
+}

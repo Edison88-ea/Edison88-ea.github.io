@@ -1,0 +1,173 @@
+/* Estilos da seção de experiência */
+.experiencia {
+  /* Define a largura máxima da seção */
+  max-width: 1200px;
+  /* Adiciona espaço interno à seção */
+  padding: 40px 20px;
+  /* Centraliza a seção horizontalmente */
+  margin: 0 auto;
+  /* Define o layout da seção como grid */
+  display: grid;
+  /* Define o layout das colunas da grid */
+  grid-template-columns: 1fr 2fr;
+  /* Adiciona espaço entre os elementos da grid */
+  gap: 100px;
+  /* Alinha os itens verticalmente ao centro */
+  align-items: center;
+}
+
+/* Estilos do subtítulo da seção de experiência */
+.experiencia .subtitulo {
+  /* Define a cor do subtítulo */
+  color: #e0e0e0;
+}
+
+/* Estilos do texto da experiência */
+.experiencia-texto {
+  /* Define o tamanho da fonte e a altura da linha do texto */
+  font-size: 1.5rem;
+  line-height: 1.33rem;
+  /* Define a largura máxima do texto */
+  max-width: 40ch;
+  /* Adiciona espaço abaixo do texto */
+  margin-bottom: 60px;
+  /* Define a cor do texto */
+  color: #525252;
+}
+
+/* Estilos do texto em negrito da experiência */
+.experiencia-texto strong {
+  /* Define a cor do texto em negrito */
+  color: #141414;
+}
+
+/* Estilos das empresas */
+.empresa {
+  /* Define o layout da empresa como grid */
+  display: grid;
+  /* Define o layout das colunas da grid da empresa */
+  grid-template-columns: 1fr 1fr;
+  /* Adiciona espaço entre os elementos da grid da empresa */
+  gap: 10px 20px;
+  /* Adiciona espaço interno à empresa */
+  padding: 20px;
+  /* Define a cor de fundo da empresa */
+  background: #f5f5f5;
+  /* Adiciona espaço abaixo da empresa */
+  margin-bottom: 20px;
+  /* Arredonda os cantos da empresa */
+  border-radius: 4px;
+  /* Define o posicionamento absoluto para o elemento ::before */
+  position: relative;
+}
+
+/* Estilos do elemento ::before da empresa */
+.empresa::before {
+  /* Define o conteúdo do elemento ::before */
+  content: "";
+  /* Define o display do elemento ::before */
+  display: block;
+  /* Define a largura e altura do elemento ::before */
+  width: 4px;
+  height: 20px;
+  /* Define o gradiente de cores do elemento ::before */
+  background: linear-gradient(#b6f829, #67dd0a);
+  /* Define o posicionamento absoluto do elemento ::before */
+  position: absolute;
+  /* Define a posição vertical e horizontal do elemento ::before */
+  top: 20px;
+  left: -4px;
+}
+
+/* Estilos do ano da empresa */
+.empresa-ano {
+  /* Define o posicionamento absoluto do ano */
+  position: absolute;
+  /* Define a posição vertical e horizontal do ano */
+  top: 22px;
+  left: -100px;
+  /* Alinha o texto do ano à direita */
+  text-align: right;
+  /* Define a largura do ano */
+  width: 80px;
+  /* Define a cor do ano */
+  color: #525252;
+  /* Define o tamanho da fonte do ano */
+  font-size: 0.875rem;
+}
+
+/* Estilos do título da empresa */
+.empresa-titulo {
+  /* Define o tamanho da fonte e a altura da linha do título */
+  font-size: 1.125rem;
+  line-height: 1.1;
+  /* Define o peso da fonte do título */
+  font-weight: bold;
+}
+
+/* Estilos do texto da empresa */
+.empresa-texto {
+  /* Define o tamanho da fonte e a altura da linha do texto */
+  font-size: 0.875rem;
+  line-height: 1.4;
+  /* Define a cor do texto */
+  color: #525252;
+}
+
+/* Estilos das habilidades da empresa */
+.empresa-habilidades {
+  /* Define o layout das habilidades como flex container */
+  display: flex;
+  /* Envolve as habilidades em uma nova linha se não houver espaço */
+  flex-wrap: wrap;
+  /* Adiciona um espaço entre as habilidades */
+  gap: 10px;
+  /* Alinha o conteúdo das habilidades ao início */
+  align-content: start;
+}
+
+/* Estilos dos itens de habilidades da empresa */
+.empresa-habilidades li {
+  /* Define o tamanho da fonte e a altura da linha dos itens de habilidades */
+  font-size: 0.875rem;
+  line-height: 1.4;
+  /* Arredonda os cantos dos itens de habilidades */
+  border-radius: 4px;
+  /* Define a cor de fundo dos itens de habilidades */
+  background: #fff;
+  /* Adiciona espaço interno aos itens de habilidades */
+  padding: 5px 10px;
+}
+
+/* Media query para telas menores que 800px */
+@media (max-width: 800px) {
+  /* Altera o layout da experiência para uma única coluna */
+  .experiencia {
+    grid-template-columns: 1fr;
+    /* Adiciona espaço entre os elementos da experiência */
+    gap: 40px;
+  }
+  /* Muda a cor do subtítulo da experiência */
+  .experiencia .subtitulo {
+    color: #141414;
+  }
+  /* Reduz o tamanho da fonte do texto da experiência */
+  .experiencia-texto {
+    font-size: 1.25rem;
+  }
+  /* Altera o posicionamento e estilo do ano da empresa */
+  .empresa-ano {
+    position: initial; /* Remove o posicionamento absoluto */
+    order: 1; /* Move o ano para o início */
+    width: initial; /* Remove a largura fixa */
+    text-align: left; /* Alinha o texto do ano à esquerda */
+  }
+}
+
+/* Media query para telas menores que 400px */
+@media (max-width: 400px) {
+  /* Altera o layout da empresa para uma única coluna */
+  .empresa {
+    grid-template-columns: 1fr;
+  }
+}
